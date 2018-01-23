@@ -11,6 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::get('/', 'ReportController@index');
+
+Route::post('/save', 'ReportController@store');
+
+Route::get('{report}/report', 'ReportController@show');
+
+Route::get('/createWord', 'ReportController@saveAsWordDocx');
