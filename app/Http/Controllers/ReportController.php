@@ -77,15 +77,10 @@ class ReportController extends Controller
       $companyEmail = "mstrasser@wallstreetdocs.com";
       $companyVatRegNo = "GB 993 9523 61";
 
-      // $report = Report::findOrFail(1);
-
-      // dd($report->description);
-
       $pdf = PDF::loadView('htmlReport', compact('report', 'companyAddressLineOne','companyAddressLineTwo',
       'companyAddressLineThree','companyPhone','companyEmail','companyVatRegNo'));
       return $pdf->download('report.pdf');
 
     }
-
 
 }
