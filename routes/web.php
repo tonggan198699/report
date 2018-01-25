@@ -16,8 +16,6 @@ Route::get('/', 'ReportController@index');
 
 Route::post('/save', 'ReportController@store');
 
-Route::get('{report}/report', 'ReportController@show');
+Route::get('{report}/report', 'ReportController@show')->name('report.show');
 
 Route::get('{report}/report/toPdf', 'ReportController@convertToPdf');
-
-// Route::get('/toPdf', 'ReportController@convertToPdf');

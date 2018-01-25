@@ -43,10 +43,9 @@ class ReportController extends Controller
         ]);
 
         if ($report) {
-
           $report->save();
           $request->session()->flash('success', 'You have successfully created your report');
-            return redirect('/report');;
+            return redirect()->route('report.show', $report);
         } else {
             return redirect()->back()->with('failure', 'Please try again!');
         }
