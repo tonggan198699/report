@@ -18,4 +18,6 @@ Route::post('/save', 'ReportController@store');
 
 Route::get('{report}/report', 'ReportController@show');
 
-Route::get('/createWord', 'ReportController@saveAsWordDocx');
+Route::get('{report}/report/toPdf', 'ReportController@convertToPdf');
+
+// Route::get('/toPdf', 'ReportController@convertToPdf');
